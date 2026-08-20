@@ -1,0 +1,77 @@
+.la-orden {
+  background: var(--blanco);
+  position: relative;
+}
+
+.la-orden-intro {
+  max-width: 760px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+
+.la-orden-intro .lead {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.la-orden-intro .eyebrow {
+  justify-content: center;
+}
+
+.la-orden-intro .eyebrow::before {
+  display: none;
+}
+
+.virtudes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.virtud-card {
+  padding: 30px 24px;
+  border-radius: 18px;
+  border: 1px solid var(--borde-suave);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
+}
+
+.virtud-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(184, 145, 43, 0.5);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.virtud-icono {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  color: var(--oro-oscuro);
+  background: rgba(184, 145, 43, 0.12);
+  transition: transform 0.4s var(--ease);
+}
+
+.virtud-card:hover .virtud-icono {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.virtud-card h3 {
+  font-family: var(--fuente-texto);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--texto);
+  margin-bottom: 8px;
+}
+
+.virtud-card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}

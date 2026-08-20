@@ -1,0 +1,115 @@
+.cargos {
+  background: var(--crema);
+}
+
+.cargos-intro {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+
+.cargos-intro .lead {
+  max-width: 100%;
+}
+
+.cargos-intro .eyebrow {
+  justify-content: center;
+}
+.cargos-intro .eyebrow::before {
+  display: none;
+}
+
+.cargos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 22px;
+}
+
+.officer-card {
+  border-radius: 18px;
+  border: 1px solid var(--borde-suave);
+  background: var(--blanco);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
+}
+
+.officer-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(205, 17, 38, 0.4);
+  box-shadow: var(--sombra-fuerte);
+}
+
+.officer-foto {
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.avatar-placeholder,
+.avatar-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  display: grid;
+  place-items: center;
+  transition: transform 0.5s var(--ease);
+}
+
+.officer-card:hover .avatar-placeholder,
+.officer-card:hover .avatar-foto {
+  transform: scale(1.06);
+}
+
+.avatar-placeholder span {
+  font-family: var(--fuente-display);
+  font-size: 34px;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.04em;
+}
+
+.officer-info {
+  padding: 16px 18px 20px;
+}
+
+.officer-info h3 {
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--texto);
+  margin-bottom: 4px;
+}
+
+.officer-info span {
+  font-size: 12.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--azul);
+}
+
+.cargos-subtitulo {
+  margin: 72px 0 32px;
+  text-align: center;
+}
+
+.cargos-subtitulo h3 {
+  font-family: var(--fuente-display);
+  font-size: 24px;
+  color: var(--texto);
+  margin-bottom: 6px;
+}
+
+.cargos-subtitulo p {
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.cargos-grid-asesor {
+  grid-template-columns: repeat(auto-fit, minmax(190px, 240px));
+  justify-content: center;
+}
