@@ -33,8 +33,15 @@ export default function Footer() {
         </nav>
 
         <p className="footer-copy">
-          © {año} Capítulo Mariscal Francisco Solano López Nº 333. Sitio en construcción — página
-          de ejemplo.
+          © {año} Capítulo Mariscal Francisco Solano López Nº 333. Todos los derechos reservados.
+        </p>
+
+        <p className="footer-credito">
+          Desarrollado por{' '}
+          <a href="https://codebywill.vercel.app/" target="_blank" rel="noopener noreferrer">
+            codebywill
+          </a>{' '}
+          · 2026
         </p>
       </div>
     </footer>
