@@ -1,20 +1,24 @@
 import Reveal from './Reveal'
 import './Contacto.css'
 
+const MENSAJE_WHATSAPP = 'Buenos días Capítulo Mariscal López, me gustaría unirme al capítulo'
+
 const INFO = [
   {
     titulo: 'Correo electrónico',
-    valor: 'contacto@capitulo333.org.py',
+    valor: 'mariscal.lopeznro19@gmail.com',
+    href: 'mailto:mariscal.lopeznro19@gmail.com',
     icono: <path d="M3 6h18v12H3zM3 6l9 7 9-7" />,
   },
   {
     titulo: 'WhatsApp',
-    valor: '+595 9XX XXX XXX',
+    valor: '+595 991 569202',
+    href: `https://wa.me/595991569202?text=${encodeURIComponent(MENSAJE_WHATSAPP)}`,
     icono: <path d="M21 12a9 9 0 1 1-4.1-7.6M21 3l-6.5 6.5M8 12l2.5 2.5L16 9" />,
   },
 ]
 
-const REDES = ['Instagram', 'Facebook', 'TikTok']
+const REDES = [{ nombre: 'Instagram', href: 'https://www.instagram.com/capitulo.mariscal.lopez?igsi=OGt6bG91Mmg3dDBr' }]
 
 export default function Contacto() {
   return (
@@ -38,7 +42,9 @@ export default function Contacto() {
                 </svg>
                 <div>
                   <strong>{item.titulo}</strong>
-                  <span>{item.valor}</span>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer">
+                    {item.valor}
+                  </a>
                 </div>
               </div>
             ))}
@@ -46,8 +52,14 @@ export default function Contacto() {
 
           <div className="contacto-redes">
             {REDES.map((red) => (
-              <a key={red} href="#" className="contacto-red" onClick={(e) => e.preventDefault()}>
-                {red}
+              <a
+                key={red.nombre}
+                href={red.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contacto-red"
+              >
+                {red.nombre}
               </a>
             ))}
           </div>

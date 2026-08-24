@@ -34,9 +34,15 @@
   font-size: 14.5px;
 }
 
-.contacto-item span {
+.contacto-item a {
   color: var(--muted);
   font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s var(--ease);
+}
+
+.contacto-item a:hover {
+  color: var(--rojo);
 }
 
 .contacto-redes {
