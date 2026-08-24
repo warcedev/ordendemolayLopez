@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const PALETA = [
   ['#cd1126', '#8f0c1c'],
   ['#0038a8', '#00204f'],
@@ -15,9 +17,17 @@ function inicialesDe(nombre) {
     .toUpperCase()
 }
 
+function slugDe(nombre) {
+  const sinAcentos = nombre.normalize('NFD').replace(new RegExp('\\p{Mn}', 'gu'), '')
+  return sinAcentos.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+}
+
 export default function Avatar({ nombre, foto, indice = 0 }) {
-  if (foto) {
-    return <img className="avatar-foto" src={foto} alt={nombre} />
+  const [fallo, setFallo] = useState(false)
+  const src = foto || `/${slugDe(nombre)}.jpeg`
+
+  if (!fallo) {
+    return <img className="avatar-foto" src={src} alt={nombre} onError={() => setFallo(true)} />
   }
 
   const [desde, hasta] = PALETA[indice % PALETA.length]

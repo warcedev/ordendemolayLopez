@@ -41,7 +41,7 @@ export default function SolanoLopez() {
           <span className="sl-cita-marca" aria-hidden="true">
             &ldquo;
           </span>
-          <p>Muero con mi patria</p>
+          <p>Muero por mi patria, con la espada en la mano.</p>
           <span className="sl-cita-autor">— Atribuida al Mariscal Francisco Solano López, Cerro Corá, 1870</span>
         </Reveal>
       </div>

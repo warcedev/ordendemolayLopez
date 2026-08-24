@@ -7,15 +7,7 @@
   padding: 72px clamp(24px, 6vw, 72px);
   border-radius: 28px;
   overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    var(--rojo) 0%,
-    var(--rojo) 33.33%,
-    var(--blanco) 33.33%,
-    var(--blanco) 66.66%,
-    var(--azul) 66.66%,
-    var(--azul) 100%
-  );
+  background: url('/mariscaltarjeta.png') center / cover no-repeat;
   box-shadow: var(--sombra-fuerte);
   text-align: center;
 }
@@ -24,7 +16,8 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(60% 80% at 50% 0%, rgba(255, 255, 255, 0.14), transparent 70%);
+  background: radial-gradient(60% 80% at 50% 0%, rgba(255, 255, 255, 0.12), transparent 70%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.4) 100%);
   pointer-events: none;
 }
 
@@ -37,15 +30,14 @@
   gap: 16px;
   padding: 40px clamp(20px, 4vw, 48px);
   border-radius: 20px;
-  background: rgba(8, 20, 58, 0.48);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  background: rgba(0, 0, 0, 0.32);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
 .unete-texto .eyebrow {
   justify-content: center;
   color: var(--blanco);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
 }
 .unete-texto .eyebrow::before {
   display: none;
@@ -53,6 +45,9 @@
 
 .unete-texto h2 {
   color: var(--blanco);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.7),
+    0 6px 22px rgba(0, 0, 0, 0.5);
 }
 
 .unete-texto .acento {
@@ -61,7 +56,10 @@
 
 .unete-texto .lead {
   max-width: 520px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.6),
+    0 4px 16px rgba(0, 0, 0, 0.45);
 }
 
 .unete-lista {
@@ -79,7 +77,8 @@
   align-items: center;
   gap: 12px;
   font-size: 15px;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .unete-check {
@@ -89,8 +88,8 @@
   height: 24px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   color: var(--blanco);
   font-size: 13px;
   font-weight: 700;

@@ -25,7 +25,7 @@ export const virtudes = [
     icono: 'escudo',
   },
   {
-    nombre: 'Limpieza',
+    nombre: 'Pureza',
     descripcion: 'La pureza de pensamiento, palabra y acción en la vida cotidiana.',
     icono: 'gota',
   },
